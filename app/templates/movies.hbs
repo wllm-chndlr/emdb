@@ -1,9 +1,19 @@
 {{page-title "Movies"}}
 
-<ul>
-  {{#each @model as |movie|}}
-    <li>{{movie}}</li>
-  {{/each}}
-</ul>
+<div class="content">
+    <input type="text">
+
+    <select name="genre-select" id=""></select>
+
+    <div class="movies-grid">
+        {{#each @model as |movie|}}
+            <LinkTo @route="movie" @model={{movie}}>
+                <div class="movie-card">
+                    <img src={{movie.posterUrl}}/>
+                </div>
+            </LinkTo>
+        {{/each}}
+    </div>
+</div>
 
 {{outlet}}

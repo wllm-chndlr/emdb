@@ -21,6 +21,12 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+
+    googleFonts: [
+        'Roboto',
+        'Recursive',
+        'Teko',
+    ]
   };
 
   if (environment === 'development') {
@@ -45,6 +51,9 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV['ember-cli-mirage'] = {
+        enabled: true
+    };
   }
 
   return ENV;

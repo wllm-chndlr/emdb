@@ -1,0 +1,81 @@
+// meyer reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+ol, ul {
+	list-style: none;
+}
+// end reset
+
+body {
+    // color: #fff;
+    font-family: Teko sans-serif;
+    // background-color: #282c34;
+	line-height: 1;
+}
+
+h1, p, button {
+    font-family: Teko;
+}
+
+nav {
+    background-color: #20232a;
+    color: #fff;
+    font-size: 2rem;
+    // min-height: 6rem;
+    // margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.content {
+    padding: 1rem 2rem;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-gap: 2rem;
+
+    .movie-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+
+        img {
+            max-width: 200px;
+        }
+    }
+}
+
+.movie-wrapper {
+    display: flex;
+
+    .movie-details {
+        margin-left: 2rem;
+    }
+}
