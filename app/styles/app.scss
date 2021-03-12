@@ -83,6 +83,10 @@ nav {
             margin-right: 1rem;
             min-width: 10rem;
         }
+
+        &.flex-start {
+            justify-content: flex-start;
+        }
     }
 
     button {

@@ -43,13 +43,14 @@ export default class MoviesController extends Controller {
 
     @action searchMovies() {
         const searchCriteria = document.querySelector('#movie-search-input').value.toLowerCase();
+        let results = [];
 
         if (searchCriteria) {
-            const results = this.model.filter(movie => movie.title.toLowerCase().includes(searchCriteria));
-            console.log(results);
+            results = this.model.filter(movie => movie.title.toLowerCase().includes(searchCriteria));
+        }
 
+        if (results.length) {
             this.movies = results;
-
         } else {
             this.movies = this.model;
         }
