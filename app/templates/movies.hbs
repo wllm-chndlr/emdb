@@ -11,8 +11,12 @@
             </sb.Option>
         {{/each}}
     </NativeSelectBox>
-    <input id="movie-search-input" placeholder="Search movies" type="text">
-    <button {{on "click" this.searchMovies}} type="button">Search</button>
+    <Input
+        @id="search-input"
+        @placeholder="Search by name"
+        @value={{this.searchCriteria}}
+        {{on "keyup" this.searchMovies}}
+    />
 </div>
 
 <div class="movies-grid">

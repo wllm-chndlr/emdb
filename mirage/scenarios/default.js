@@ -7,7 +7,13 @@ export default function(server) {
         director: "Christopher Nolan",
         rottenTomatoes: 72,
         releaseDate: "October 26, 2014",
-        genre: "Sci-Fi"
+        genre: "Sci-Fi",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Total garbage',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -18,7 +24,13 @@ export default function(server) {
         director: "Peter Jackson",
         rottenTomatoes: 93,
         releaseDate: "Dec 17, 2003",
-        genre: "Fantasy"
+        genre: "Fantasy",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Horrible',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -30,7 +42,13 @@ export default function(server) {
         director: "Ridley Scott",
         rottenTomatoes: 87,
         releaseDate: "May 5, 2000",
-        genre: "Action & Adventure"
+        genre: "Action & Adventure",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Hated it',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -42,7 +60,13 @@ export default function(server) {
         director: "Frank Darabont",
         rottenTomatoes: 79,
         releaseDate: "Dec 10, 1999",
-        genre: "Drama"
+        genre: "Drama",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Dreck',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -54,7 +78,13 @@ export default function(server) {
         director: "Jonathan Demme",
         rottenTomatoes: 96,
         releaseDate: "Feb 13, 1991",
-        genre: "Horror"
+        genre: "Horror",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Pointless',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -66,7 +96,13 @@ export default function(server) {
         director: "David Fincher",
         rottenTomatoes: 79,
         releaseDate: "Oct 15, 1999",
-        genre: "Drama"
+        genre: "Drama",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Waste of two hours',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -78,7 +114,13 @@ export default function(server) {
         director: "Quentin Tarantino",
         rottenTomatoes: 92,
         releaseDate: "Sep 23, 1994",
-        genre: "Drama"
+        genre: "Drama",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Blech!',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -90,7 +132,13 @@ export default function(server) {
         director: "David Gordon Green",
         rottenTomatoes: 68,
         releaseDate: "Aug 6, 2008",
-        genre: "Comedy"
+        genre: "Comedy",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'A painful monstrosity',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -102,7 +150,13 @@ export default function(server) {
         director: "David Gordon Green",
         rottenTomatoes: 97,
         releaseDate: "Dec 14, 2018",
-        genre: "Animation"
+        genre: "Animation",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Why?',
+            }
+        ],
       });
 
       server.create("movie", {
@@ -114,6 +168,12 @@ export default function(server) {
         director: "Bong Joon-Ho",
         rottenTomatoes: 95,
         releaseDate: "Jun 27, 2014",
-        genre: "Sci-Fi"
+        genre: "Sci-Fi",
+        reviews: [
+            {
+                reviewer: 'Alex Trebek',
+                review: 'Beyond horrid',
+            }
+        ],
       });
 }

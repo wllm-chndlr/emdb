@@ -24,10 +24,7 @@ module.exports = function (environment) {
 
     googleFonts: [
         'Roboto',
-        'Recursive',
-        'Teko',
-        'Play',
-        'Secular One',
+        'Share Tech Mono',
     ]
   };
 

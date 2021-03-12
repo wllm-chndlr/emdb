@@ -28,6 +28,43 @@
         {{else}}
             <button {{on "click" this.editMovie}} type="button">Edit</button>
         {{/if}}
+
+        <div class="reviews">
+            <p>Reviews:</p>
+            {{#if @model.reviews.length}}
+                {{#each @model.reviews as |review|}}
+                    <div class="review-wrapper">
+                        <p>"{{review.review}}"</p>
+                        <p>- {{review.reviewer}}</p>
+                    </div>
+                {{/each}}
+            {{else}}
+                No reviews yet!
+            {{/if}}
+
+            <div class="add-review-wrapper">
+                {{#if this.addingReview}}
+                    <Input
+                        @id="reviewer-input"
+                        @placeholder="Your name"
+                        @value={{this.newReviewer}}
+                    />
+                    <Input
+                        @id="review-input"
+                        @placeholder="Your review"
+                        @value={{this.newReview}}
+                    />
+                    <div class="add-review-button-wrapper">
+                        <button {{on "click" this.cancelAddReview}} type="button">Cancel</button>
+                        <button {{on "click" this.saveReview}} type="button">Save</button>
+                    </div>
+                {{else}}
+                    <div class="add-review-button-wrapper">
+                        <button {{on "click" this.addReview}} type="button">Add Review</button>
+                    </div>
+                {{/if}}
+            </div>
+        </div>
     </div>
 
 </div>
