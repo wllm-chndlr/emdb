@@ -26,6 +26,8 @@ module.exports = function (environment) {
         'Roboto',
         'Recursive',
         'Teko',
+        'Play',
+        'Secular One',
     ]
   };
 

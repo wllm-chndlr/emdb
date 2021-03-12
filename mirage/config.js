@@ -30,9 +30,7 @@ export default function() {
         return schema.movies.all();
     });
 
-    // this.get('/movies/:id', (schema, request) => {
-    //     return schema.movies.all();
-    // });
-
     this.get('/movies/:id');
+
+    this.patch('/movies/:id'); // or this.patch
 }

@@ -1,19 +1,28 @@
 {{page-title "Movies"}}
 
-<div class="content">
-    <input type="text">
-
-    <select name="genre-select" id=""></select>
-
-    <div class="movies-grid">
-        {{#each @model as |movie|}}
-            <LinkTo @route="movie" @model={{movie}}>
-                <div class="movie-card">
-                    <img src={{movie.posterUrl}}/>
-                </div>
-            </LinkTo>
+<div class="action-container">
+    <NativeSelectBox
+        @value={{this.selectedGenre}}
+        @onSelect={{this.selectGenre}} as |sb|
+    >
+        {{#each this.genreOptions as |genre|}}
+            <sb.Option @value={{genre.value}}>
+                {{genre.name}}
+            </sb.Option>
         {{/each}}
-    </div>
+    </NativeSelectBox>
+    <input id="movie-search-input" placeholder="Search movies" type="text">
+    <button {{on "click" this.searchMovies}} type="button">Search</button>
+</div>
+
+<div class="movies-grid">
+    {{#each this.movies as |movie|}}
+        <LinkTo @route="movie" @model={{movie}}>
+            <div class="movie-card">
+                <img class="movie-poster" alt={{movie.title}} src={{movie.posterUrl}}/>
+            </div>
+        </LinkTo>
+    {{/each}}
 </div>
 
 {{outlet}}

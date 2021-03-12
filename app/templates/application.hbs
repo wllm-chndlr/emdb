@@ -2,6 +2,12 @@
 
 <nav>
     <h1>Ember Movie Database</h1>
+
+    <LinkTo @route="movies">
+        <button type="button">Home</button>
+    </LinkTo>
 </nav>
 
-{{outlet}}
+<div class="content">
+    {{outlet}}
+</div>

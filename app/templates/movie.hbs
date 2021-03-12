@@ -1,23 +1,34 @@
 {{page-title @model.title}}
 
-<LinkTo @route="movies">
-    <button type="button">&lt; Back</button>
-</LinkTo>
+<div class="action-container">
+    <LinkTo @route="movies">
+        <button type="button">&lt; Back</button>
+    </LinkTo>
+</div>
 
 <div class="movie-wrapper">
 
-    <img alt={{@model.title}} src={{@model.posterUrl}} />
+    <img class="movie-poster" alt={{@model.title}} src={{@model.posterUrl}} />
 
     <div class="movie-details">
-        <h1>{{@model.title}}</h1>
+        <h1 class="movie-title">{{@model.title}}</h1>
+{{!--
+        <p>Directed by:</p>
+        <input readonly={{if this.editing false true}} type="text" value={{this.movieCopy.director}}> --}}
+
         <p>Directed by: {{@model.director}}</p>
         <p>Released: {{@model.releaseDate}}</p>
         <p>Genre: {{@model.genre}}</p>
         <p>Rotten Tomatoes score: {{@model.rottenTomatoes}}</p>
         <p>{{@model.description}}</p>
 
+        {{#if this.editing}}
+            <button {{on "click" this.cancel}} type="button">Cancel</button>
+            <button {{on "click" this.saveMovie}} type="button">Save</button>
+        {{else}}
+            <button {{on "click" this.editMovie}} type="button">Edit</button>
+        {{/if}}
     </div>
-
 
 </div>
 
