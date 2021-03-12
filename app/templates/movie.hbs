@@ -7,15 +7,9 @@
 </div>
 
 <div class="movie-wrapper">
-
     <img class="movie-poster" alt={{@model.title}} src={{@model.posterUrl}} />
-
     <div class="movie-details">
         <h1 class="movie-title">{{@model.title}}</h1>
-{{!--
-        <p>Directed by:</p>
-        <input readonly={{if this.editing false true}} type="text" value={{this.movieCopy.director}}> --}}
-
         <p>Directed by: {{@model.director}}</p>
         <p>Released: {{@model.releaseDate}}</p>
         <p>Genre: {{@model.genre}}</p>
@@ -66,7 +60,6 @@
             </div>
         </div>
     </div>
-
 </div>
 
 {{outlet}}

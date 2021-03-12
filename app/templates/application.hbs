@@ -1,15 +1,23 @@
 {{page-title "Ember Movie Database"}}
 
-<nav>
-    <LinkTo @route="movies">
-        <h1>Ember Movie Database</h1>
-    </LinkTo>
+<div class="app-wrapper">
+    <nav>
+        <LinkTo @route="movies">
+            <h1>Ember Movie Database</h1>
+        </LinkTo>
 
-    <LinkTo @route="movies">
-        <button type="button">Home</button>
-    </LinkTo>
-</nav>
+        <LinkTo @route="movies">
+            <button type="button">Home</button>
+        </LinkTo>
+    </nav>
 
-<div class="content">
-    {{outlet}}
+    <section>
+        {{outlet}}
+    </section>
+
+    <footer>
+        <p>
+            Made with Ember Octane 2021
+        </p>
+    </footer>
 </div>

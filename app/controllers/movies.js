@@ -56,12 +56,10 @@ export default class MoviesController extends Controller {
     }
 
     @action selectGenre(genre) {
-        debugger
         if (genre) {
             const results = this.model.filter(movie => movie.genre === genre);
 
             this.movies = results;
-
         } else {
             this.movies = this.model;
         }

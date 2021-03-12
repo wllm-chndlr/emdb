@@ -3,25 +3,10 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 export default class MovieController extends Controller {
-    @tracked movieCopy = this.model;
     @tracked editing = null;
     @tracked addingReview = null;
     @tracked newReview = '';
     @tracked newReviewer = '';
-
-    @action editMovie() {
-        this.editing = true;
-    }
-
-    @action saveMovie() {
-        // Not currently working
-        this.movieCopy.save();
-        this.editing = false;
-    }
-
-    @action cancel() {
-        this.editing = false;
-    }
 
     @action addReview() {
         this.addingReview = true;
@@ -29,8 +14,22 @@ export default class MovieController extends Controller {
         this.newReviewer = '';
     }
 
+    @action cancel() {
+        this.editing = false;
+    }
+
     @action cancelAddReview() {
         this.addingReview = false;
+    }
+
+    // Not currently working
+    @action editMovie() {
+        this.editing = true;
+    }
+
+    // Not currently working
+    @action saveMovie() {
+        this.editing = false;
     }
 
     @action saveReview() {

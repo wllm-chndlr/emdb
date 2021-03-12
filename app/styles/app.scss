@@ -1,4 +1,4 @@
-// meyer reset
+// start reset
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -36,149 +36,168 @@ body {
 	line-height: 1;
 }
 
-button {
-    border-radius: 2px;
-    cursor: pointer;
-    font-family: 'Share Tech Mono', monospace;
-    min-width: 5rem;
-}
-
-nav {
-    align-items: center;
-    background-color: #20232a;
-    color: #fff;
+.app-wrapper {
     display: flex;
-    font-size: 2rem;
+    flex-direction: column;
     justify-content: space-between;
-    padding: 1rem;
+    min-height: 100vh;
 
-    a {
+    nav {
         align-items: center;
+        background-color: #20232a;
         color: #fff;
         display: flex;
-        text-decoration: none;
+        font-size: 2rem;
+        justify-content: space-between;
+        padding: 1rem;
+
+        a {
+            align-items: center;
+            color: #fff;
+            display: flex;
+            text-decoration: none;
+
+            button {
+                background: transparent;
+                border: 1px solid #fff;
+                color: #fff;
+                margin-right: 2rem;
+                padding: 0.5rem;
+            }
+        }
+
+    }
+
+    section {
+        flex-grow: 1;
+        padding: 2rem;
+
+        .action-container {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2rem;
+            min-height: 2.5rem;
+
+            input {
+                height: 20px;
+                margin-right: 0.5rem;
+                min-width: 10rem;
+                padding: 0.25rem;
+            }
+
+            select {
+                height: 32px;
+                margin-right: 1rem;
+                min-width: 10rem;
+                padding: 0.25rem;
+
+            }
+
+            &.flex-start {
+                justify-content: flex-start;
+            }
+        }
+
+        .movies-grid {
+            display: grid;
+            grid-gap: 2rem;
+            grid-template-columns: repeat(5, 200px);
+            grid-template-rows: auto;
+
+            .movie-card {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    max-width: 200px;
+                }
+            }
+        }
+
+        .movie-wrapper {
+            display: flex;
+
+            img {
+                max-height: 600px;
+                max-width: 400px;
+            }
+
+            .movie-details {
+                margin-left: 2rem;
+                margin-top: 1rem;
+
+                h1 {
+                    font-size: 2rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                p {
+                    margin-bottom: 1rem;
+
+                    &:last-of-type {
+                        margin-bottom: 2rem;
+                    }
+                }
+
+                .reviews {
+                    margin-top: 4rem;
+
+                    .review-wrapper {
+                        margin-left: 0.5rem;
+                    }
+
+                    .add-review-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 2rem;
+
+                        input {
+                            margin-bottom: 1rem;
+                            height: 20px;
+                            padding: 0.25rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .movie-poster {
+            border-radius: 0.5rem;
+        }
 
         button {
             background: transparent;
-            border: 1px solid #fff;
-            // border-radius: 0.25rem;
-            color: #fff;
-            margin-right: 2rem;
-            padding: 0.5rem;
-        }
-    }
-
-}
-
-.content {
-    padding: 2rem;
-
-    .action-container {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        margin-bottom: 2rem;
-        min-height: 2.5rem;
-
-        input {
-            height: 20px;
-            margin-right: 0.5rem;
-            min-width: 10rem;
-            padding: 0.25rem;
-        }
-
-        select {
-            height: 32px;
+            border: 1px solid #20232a;
+            color: #20232a;
+            height: 2rem;
+            min-width: 7rem;
             margin-right: 1rem;
-            min-width: 10rem;
-            padding: 0.25rem;
+            transition: all 0.2s ease;
 
-        }
-
-        &.flex-start {
-            justify-content: flex-start;
+            &:hover {
+                background: #20232a;
+                color: #fff;
+            }
         }
     }
 
     button {
-        background: transparent;
-        border: 1px solid #20232a;
-        color: #20232a;
-        height: 2rem;
-        min-width: 5rem;
-        margin-right: 1rem;
-        transition: all 0.2s ease;
-
-        &:hover {
-            background: #20232a;
-            color: #fff;
-        }
-    }
-}
-
-.movie-poster {
-    border-radius: 0.5rem;
-}
-
-.movies-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 200px);
-    grid-gap: 2rem;
-
-    .movie-card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        img {
-            max-width: 200px;
-        }
-    }
-}
-
-.movie-wrapper {
-    display: flex;
-
-    img {
-        max-height: 600px;
-        max-width: 400px;
+        border-radius: 2px;
+        cursor: pointer;
+        font-family: 'Share Tech Mono', monospace;
+        min-width: 7rem;
     }
 
-    .movie-details {
-        margin-left: 2rem;
-        margin-top: 1rem;
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
+    footer {
+        background-color: #20232a;
+        color: #fff;
+        padding: 1rem;
+        text-align: right;
 
         p {
-            margin-bottom: 1rem;
-
-            &:last-of-type {
-                margin-bottom: 2rem;
-            }
-        }
-
-        .reviews {
-            margin-top: 4rem;
-
-            .review-wrapper {
-                margin-left: 0.5rem;
-            }
-
-            .add-review-wrapper {
-                display: flex;
-                flex-direction: column;
-                margin-top: 2rem;
-
-                input {
-                    margin-bottom: 1rem;
-                    height: 20px;
-                    padding: 0.25rem;
-                }
-            }
+            margin-right: 2rem;
         }
     }
 }
